@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react';
 
 function App() {
+
+  let post = 'Docker for DevOps';
+  let [title, b] = useState('What is AWS?');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="black-nav">
+        <h3>Blog</h3>
+      </div>
+      <div className="list">
+        <h4>{title}</h4>
+        <p>May 20, 2022</p>
+      </div>
     </div>
   );
 }
